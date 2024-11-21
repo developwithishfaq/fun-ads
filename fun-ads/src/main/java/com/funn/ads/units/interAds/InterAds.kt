@@ -12,7 +12,6 @@ import com.monetization.adsmain.commons.loadAd
 import com.monetization.adsmain.showRates.full_screen_ads.FullScreenAdsShowManager
 import com.monetization.core.ad_units.core.AdType
 import com.monetization.core.counters.CounterManager.isCounterRegistered
-import com.remote.firebaseconfigs.RemoteCommons.toConfigString
 
 
 fun View.setOnActionClickListener(
@@ -39,7 +38,7 @@ fun View.setOnActionClickListener(
 fun loadAds(ads: List<AdKeyWithType>, activity: Activity) {
     ads.forEach {
         it.adKey.loadAd(
-            true.toConfigString(),
+            "SDK_TRUE",
             activity = activity,
             adType = it.adType
         )
@@ -55,7 +54,7 @@ fun showFullScreenAd(
     showFiltered?.let {
         val template = it.template
         FullScreenAdsShowManager.showFullScreenAd(
-            placementKey = true.toConfigString(),
+            placementKey = "SDK_TRUE",
             key = showFiltered.adKey,
             adType = showFiltered.adType,
             isInstantAd = template.isInstant.toBoolean(),

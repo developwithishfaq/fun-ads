@@ -6,7 +6,6 @@ import com.monetization.adsmain.showRates.full_screen_ads.FullScreenAdsShowManag
 import com.monetization.core.ad_units.core.AdType
 import com.monetization.core.listeners.UiAdsListener
 import com.monetization.core.msgs.MessagesType
-import com.remote.firebaseconfigs.RemoteCommons.isAdEnabled
 
 
 object FullScreenAdsShowManagerFun {
