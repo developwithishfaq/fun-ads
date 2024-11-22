@@ -56,8 +56,9 @@ fun ActionsModel.toActionFiltered(
                     adKey = adToShow.controller,
                     adType = controllers.firstOrNull { it.adKey == adToShow.controller }?.adType
                         ?: AdType.INTERSTITIAL,
-                    template = template[index]
+                    template = template[index],
                 )
+                filteredAction.canOverride = action.canOverride.toBoolean()
             }
         }
         if (filteredAction.adsToLoad.isNotEmpty() || filteredAction.adToShow != null) {

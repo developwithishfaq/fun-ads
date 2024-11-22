@@ -8,7 +8,8 @@ import com.monetization.core.ad_units.core.AdType
 data class ActionFiltered(
     var actionKey: String = "",
     var adsToLoad: List<AdKeyWithType> = emptyList(),
-    var adToShow: ShowFiltered? = null
+    var adToShow: ShowFiltered? = null,
+    var canOverride: Boolean = false,
 )
 
 data class UiAdFiltered(

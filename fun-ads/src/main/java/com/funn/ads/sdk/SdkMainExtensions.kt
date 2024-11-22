@@ -18,23 +18,30 @@ fun FunAdsSdk.init(
     controllersListener: ControllersListener? = null,
     onInit: () -> Unit
 ) {
-    val listener = FunConfigs.getFunRemoteListener() ?: throw IllegalArgumentException("Please Set setFunConfigsListener")
-    val remoteFetch = listener.getBooleanFromRemote(remoteFetchSupportedKey)
-    val jsonFile = if (remoteFetch) {
-        listener.getStringFromRemote(remoteFetchFileKey).toAdsJsonModel()
-    } else {
-        localRes.readJsonFromRawFile(context).toAdsJsonModel()
-    }
-    logFunSdk("Fetched(remotely=$remoteFetch),File=$jsonFile ")
-    jsonFile?.let {
-        initialize(
-            jsonModel = it,
-            localControllers = controllers,
-            controllersListener = controllersListener
-        ) {
+    try {
+        val listener = FunConfigs.getFunRemoteListener()
+            ?: throw IllegalArgumentException("Please Set setFunConfigsListener")
+        val remoteFetch = listener.getBooleanFromRemote(remoteFetchSupportedKey)
+        val jsonFile = if (remoteFetch) {
+            listener.getStringFromRemote(remoteFetchFileKey).toAdsJsonModel()
+        } else {
+            localRes.readJsonFromRawFile(context).toAdsJsonModel()
+        }
+        logFunSdk("Fetched(remotely=$remoteFetch),File=$jsonFile ")
+        jsonFile?.let {
+            initialize(
+                jsonModel = it,
+                localControllers = controllers,
+                controllersListener = controllersListener
+            ) {
+                onInit.invoke()
+            }
+        } ?: kotlin.run {
+            logFunSdk("Fun SDK not initialized, Because Json File Is Null ", true)
             onInit.invoke()
         }
-    } ?: kotlin.run {
+    } catch (e: Exception) {
+        logFunSdk("Exception In Init Of Fun Sdk, Message = ${e.message}", true)
         onInit.invoke()
     }
 

@@ -1,6 +1,7 @@
 package com.funn.ads.ad_units.full_screen
 
 import android.app.Activity
+import com.funn.ads.domain.model.ActionFiltered
 import com.funn.ads.sdk.FunAdsSdk
 import com.monetization.adsmain.showRates.full_screen_ads.FullScreenAdsShowManager
 import com.monetization.core.ad_units.core.AdType
@@ -26,8 +27,8 @@ object FullScreenAdsShowManagerFun {
         onRewarded: ((Boolean) -> Unit)? = null,
         onCounterUpdate: ((Int) -> Unit)? = null,
     ) {
-        val model = FunAdsSdk.getActionByKey(placementKey)
-        if (model?.adToShow != null) {
+        val model: ActionFiltered? = FunAdsSdk.getActionByKey(placementKey)
+        if (model?.adToShow != null && model.canOverride) {
             com.funn.ads.units.interAds.showFullScreenAd(activity, model.adToShow) {
                 onAdDismiss.invoke(it,null)
             }

@@ -32,8 +32,8 @@ androidx-material3 = { group = "androidx.compose.material3", name = "material3" 
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-admob-ads = { group = "com.github.appsapiconsole", name = "tet-ads-xml", version = "0.0.13" }
-remote = { group = "com.github.appsapiconsole", name = "tet-remote-config", version = "0.0.1" }
+admob-ads = { group = "com.github.appsapiconsole", name = "tet-ads-compose", version = "0.0.13-beta01" }
+remote = { group = "com.github.appsapiconsole", name = "tet-remote-config", version = "0.0.2" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 
@@ -50,6 +50,6 @@ fire = ["firebase-messaging", "firebase-perf", "firebase-crashlytics", "firebase
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 

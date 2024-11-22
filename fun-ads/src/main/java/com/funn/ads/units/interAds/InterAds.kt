@@ -22,7 +22,7 @@ fun View.setOnActionClickListener(
         logFunSdk("Action($actionKey) = $model")
         if (model != null) {
             loadAds(model.adsToLoad, activity)
-            if (model.adToShow != null) {
+            if (model.adToShow != null && model.canOverride.not()) {
                 showFullScreenAd(activity, model.adToShow) {
                     onClicked.invoke(it)
                 }
