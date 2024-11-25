@@ -4,12 +4,19 @@
     "list": [
       {
         "enabled": 1,
-        "key": "MyBanner",
-        "type": "banner",
+        "key": "CommonNative",
+        "type": "native",
         "adIds": [
           "ca-app-pub-3940256099942544/9214589741"
-        ],
-        "bannerAdType" : "adaptive"
+        ]
+      },
+      {
+        "enabled": 1,
+        "key": "TestNew",
+        "type": "inter",
+        "adIds": [
+          "ca-app-pub-3940256099942544/9214589741"
+        ]
       }
     ]
   },
@@ -28,7 +35,7 @@
   "actions": [
     {
       "enabled": 1,
-      "actionKey": "LoadBtn",
+      "actionKey": "Humor",
       "canOverride" : 0,
       "loadAds": [
         "Tes"
@@ -53,7 +60,7 @@
       {
         "templateKey": "instant",
         "isInstant": 1,
-        "requestNewOnShow": 1,
+        "requestNewOnShow": 0,
         "loadNewIfNotAvailable": 1,
         "normalLoadingTime": 1000,
         "instantLoadingTime": 10000,
@@ -64,23 +71,20 @@
   "uiAds": {
     "registered": [
       {
-        "enabled": 0,
-        "placementKey": "MainScreenAd",
+        "enabled": 1,
+        "placementKey": "MainNativeEnabled",
         "adName": "Native1"
       }
     ],
     "ads": [
       {
         "adName": "Native1",
-        "controller": "MyNative",
+        "controller": "CommonNative",
         "layout": "large_native_ad",
         "shimmer": "given",
-        "requestNewOnShow": "1",
-        "showNewAdEveryTime": "1",
-        "showOnlyIfAdAvailable": "0",
-        "adsWidgetData": {
-          "enabled": 1
-        }
+        "requestNewOnShow": "0",
+        "showNewAdEveryTime": "0",
+        "showOnlyIfAdAvailable": "0"
       }
     ]
   }

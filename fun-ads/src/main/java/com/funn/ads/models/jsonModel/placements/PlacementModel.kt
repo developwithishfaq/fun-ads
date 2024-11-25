@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 data class PlacementModel(
     val adName: String,
     val controller: String,
-    val layout: String,
+    val layout: String? = null,
     val requestNewOnShow: Int,
     val shimmer: String,
     val showNewAdEveryTime: Int,

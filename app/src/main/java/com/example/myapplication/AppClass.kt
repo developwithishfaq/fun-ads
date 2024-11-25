@@ -2,6 +2,8 @@ package com.example.myapplication
 
 import android.app.Activity
 import android.app.Application
+import com.funn.ads.configs.FunConfigs
+import com.funn.ads.listener.FunMainListener
 import com.google.firebase.FirebaseApp
 import com.monetization.core.ad_units.core.AdType
 import com.monetization.core.commons.SdkConfigs
@@ -11,6 +13,7 @@ import com.monetization.core.listeners.SdkListener
 import com.monetization.core.ui.AdsWidgetData
 import com.monetization.core.utils.dialog.SdkDialogs
 import com.monetization.core.utils.dialog.onAdLoadingDialogStateChange
+import com.remote.firebaseconfigs.SdkRemoteConfigController
 
 class AppClass : Application() {
     override fun onCreate() {
@@ -54,6 +57,20 @@ class AppClass : Application() {
             override fun canShowAd(adType: AdType, placementKey: String, adKey: String): Boolean {
                 return true
             }
-        }, false)
+        }, true)
+
+        FunConfigs.setFunConfigsListener(object : FunMainListener {
+            override fun getStringFromRemote(key: String): String {
+                return SdkRemoteConfigController.getRemoteConfigString(key)
+            }
+
+            override fun getBooleanFromRemote(key: String): Boolean {
+                return SdkRemoteConfigController.getRemoteConfigBoolean(key)
+            }
+
+            override fun getLongFromRemote(key: String): Long {
+                return SdkRemoteConfigController.getRemoteConfigLong(key)
+            }
+        })
     }
 }

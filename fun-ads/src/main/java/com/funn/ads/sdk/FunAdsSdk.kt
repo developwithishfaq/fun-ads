@@ -95,7 +95,7 @@ object FunAdsSdk {
                     if (model != null) {
                         placements[registeredAd.placementKey] = UiAdFiltered(
                             placement = model,
-                            adType = if (model.layout.isBlank()) {
+                            adType = if (model.layout.isNullOrBlank()) {
                                 AdType.BANNER
                             } else {
                                 AdType.NATIVE

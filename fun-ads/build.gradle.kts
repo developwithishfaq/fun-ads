@@ -60,6 +60,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
     implementation(libs.kotlinx.serialization.json)
     api(libs.bundles.ads)
 }

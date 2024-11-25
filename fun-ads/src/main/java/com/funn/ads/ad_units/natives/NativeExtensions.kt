@@ -13,6 +13,7 @@ import com.monetization.adsmain.commons.sdkNativeAdd
 import com.monetization.adsmain.widgets.AdsUiWidget
 import com.monetization.core.ad_units.core.AdType
 import com.monetization.core.commons.NativeConstants.getAdLayout
+import com.monetization.core.commons.NativeTemplates
 import com.monetization.core.commons.Utils.resToView
 import com.monetization.core.listeners.UiAdsListener
 import com.monetization.core.ui.AdsWidgetData
@@ -88,7 +89,9 @@ fun AdsUiWidget.initPlacement(activity: Activity, placementKey: String, lifecycl
         when (model.adType) {
             AdType.NATIVE -> {
                 sdkNativeAdd(
-                    adLayout = LayoutInfo.LayoutByName(placement.layout),
+                    adLayout = LayoutInfo.LayoutByName(
+                        placement.layout ?: NativeTemplates.SmallNative
+                    ),
                     adKey = placement.controller,
                     placementKey = placementKey,
                     lifecycle = lifecycle,

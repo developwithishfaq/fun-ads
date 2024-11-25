@@ -1,92 +1,91 @@
 {
   "project_info": {
-    "project_number": "673990384034",
-    "firebase_url": "https://myapplication67-e67d5.firebaseio.com",
-    "project_id": "myapplication67-e67d5",
-    "storage_bucket": "myapplication67-e67d5.appspot.com"
+    "project_number": "375059545435",
+    "project_id": "manager-b2de7",
+    "storage_bucket": "manager-b2de7.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:673990384034:android:a3a7d5fe1b2ccc39edbafb",
+        "mobilesdk_app_id": "1:375059545435:android:c4cff1c951660124f8ee7e",
+        "android_client_info": {
+          "package_name": "com.example.adsxml"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375059545435-a1qh1pciaumgj0ccrnebek7bv6vfvvbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWobNyRoSxKmCVQtU1362sSxKKVTceraE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375059545435-a1qh1pciaumgj0ccrnebek7bv6vfvvbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375059545435:android:d3cec5811510d3f9f8ee7e",
+        "android_client_info": {
+          "package_name": "com.example.manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375059545435-a1qh1pciaumgj0ccrnebek7bv6vfvvbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWobNyRoSxKmCVQtU1362sSxKKVTceraE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375059545435-a1qh1pciaumgj0ccrnebek7bv6vfvvbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375059545435:android:cd2cc18d28d432b3f8ee7e",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "673990384034-uj1ves92dtu6kac57tr06ekthagnmu85.apps.googleusercontent.com",
+          "client_id": "375059545435-a1qh1pciaumgj0ccrnebek7bv6vfvvbq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCh7FDKW0nlfVsMYak-dCdYLMnjFX2Lvj4"
+          "current_key": "AIzaSyBWobNyRoSxKmCVQtU1362sSxKKVTceraE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "673990384034-uj1ves92dtu6kac57tr06ekthagnmu85.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:673990384034:android:56081af69ce014efedbafb",
-        "android_client_info": {
-          "package_name": "com.priceoye.geodramas"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "673990384034-uj1ves92dtu6kac57tr06ekthagnmu85.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCh7FDKW0nlfVsMYak-dCdYLMnjFX2Lvj4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "673990384034-uj1ves92dtu6kac57tr06ekthagnmu85.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:673990384034:android:085dfeedbde08fa0edbafb",
-        "android_client_info": {
-          "package_name": "cricket.matches.live.data"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "673990384034-uj1ves92dtu6kac57tr06ekthagnmu85.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCh7FDKW0nlfVsMYak-dCdYLMnjFX2Lvj4"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "673990384034-uj1ves92dtu6kac57tr06ekthagnmu85.apps.googleusercontent.com",
+              "client_id": "375059545435-a1qh1pciaumgj0ccrnebek7bv6vfvvbq.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
