@@ -23,4 +23,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "FunAds"
 include(":app")
-include(":fun-ads")
+include(":ads:fun-ads")
+include(":ads:composeViews")

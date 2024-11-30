@@ -23,6 +23,7 @@ object AdsEntryManager {
                     bannerAdType = it.bannerAdType
                 )
             },
+
             controllersListener = controllersListener
         ) {
             onInitialized.invoke()

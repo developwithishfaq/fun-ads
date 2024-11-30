@@ -32,11 +32,20 @@
       }
     ]
   },
+  "preloadRequests": {
+    "list": [
+      {
+        "enabled" : 0,
+        "placementKey": "MainScreenNative",
+        "loadAds" : ["CommonNative"]
+      }
+    ]
+  },
   "actions": [
     {
       "enabled": 1,
       "actionKey": "Humor",
-      "canOverride" : 0,
+      "canOverride": 0,
       "loadAds": [
         "Tes"
       ],
