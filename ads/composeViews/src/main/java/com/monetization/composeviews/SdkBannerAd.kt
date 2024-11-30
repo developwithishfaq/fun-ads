@@ -18,7 +18,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.monetization.adsmain.widgets.AdsUiWidget
-import com.monetization.bannerads.BannerAdType
 import com.monetization.composeviews.statefull.nativeAd.OnScreenAdsViewModel
 import com.monetization.core.commons.AdsCommons.logAds
 import com.monetization.core.listeners.UiAdsListener

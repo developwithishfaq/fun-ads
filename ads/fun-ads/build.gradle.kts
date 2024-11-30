@@ -63,7 +63,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
     implementation(libs.kotlinx.serialization.json)
-    api(libs.bundles.ads)
+//    api(libs.bundles.ads)
 
     implementation(project(":ads:composeViews"))
 
