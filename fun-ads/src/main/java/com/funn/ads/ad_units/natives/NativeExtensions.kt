@@ -83,7 +83,6 @@ fun AdsUiWidget.sdkNativeAdFun(
 fun AdsUiWidget.initPlacement(activity: Activity, placementKey: String, lifecycle: Lifecycle) {
     val model = FunAdsSdk.getUiAdByKey(placementKey)
     logFunSdk("Placement(placementKey=$placementKey,controller=${model?.controller})=$model")
-    Toast.makeText(activity, "$placementKey = $model", Toast.LENGTH_SHORT).show()
     if (model?.placement != null) {
         val placement = model.placement!!
         when (model.adType) {
